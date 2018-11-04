@@ -32,7 +32,6 @@ class Boat < ActiveRecord::Base
   end
 
   def 
-    
-  end
+
   end
 end
