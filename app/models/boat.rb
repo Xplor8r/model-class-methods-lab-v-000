@@ -20,7 +20,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.without_a_captain
-    where("captain == ''")
+    where("captain == null")
   end
 
   def with_three_classifications
