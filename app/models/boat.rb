@@ -24,7 +24,9 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
-    where(classifications: {name: "Sailboat"})
+    if self.include?(:classifications)
+      where(classifications: {name: "Sailboat"})
+    end
   end
 
   def with_three_classifications
